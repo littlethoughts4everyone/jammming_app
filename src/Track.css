@@ -1,0 +1,27 @@
+.Track {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Name {
+    margin: 0;
+    padding: 0.5em;
+}
+
+.Artist-album-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1em;
+    padding: 0.3em 0.3em 0.3em 0.5em;
+    background-color: #925c5c59;
+}
+
+.Artist {
+    padding-right: 0.4em;
+    border-right: 2px solid black;
+}
+
+.Album {
+    padding-left: 0.4em;
+}

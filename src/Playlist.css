@@ -1,0 +1,31 @@
+.Playlist-container {
+    width: 40%;
+    border: 8px solid black;
+    border-radius: 10px;
+    background-color: #fbb848;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Playlist-input {
+    height: 3rem;
+    width: 89%;
+    font-size: 1.5rem;
+    margin-top: 0.7em;
+    margin-left: 0.6em;
+    margin-bottom: 1em;
+    background-color: #925c5c59;
+    color: black;
+    border: 3px solid black;
+}
+
+.Spotify-button {
+    margin: 1.5em;
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    border: 4px solid black;
+    border-radius: 8px;
+    background-color: #925c5c59;
+}

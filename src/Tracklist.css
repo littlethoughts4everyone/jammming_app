@@ -1,0 +1,26 @@
+.Tracklist {
+    margin: 0 1em;
+    padding-left: 1em;
+    width: 90%;
+}
+
+.Track-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #925c5c3d;
+    margin-bottom: 0.5em;
+}
+
+.Track-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Add-button {
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+    background-color: #925c5c59;
+}

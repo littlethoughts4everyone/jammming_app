@@ -1,0 +1,25 @@
+.Search-container {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Search-input {
+    height: 3rem;
+    width: 35rem;
+    font-size: 1.5rem;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
+
+.Search-button {
+    height: 3rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin-left: 2rem;
+}

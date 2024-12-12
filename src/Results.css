@@ -1,0 +1,14 @@
+.Results-container {
+    width: 50%;
+    border: 8px solid black;
+    border-radius: 10px;
+    background-color: #fbb848;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Results-heading {
+    margin-left: 0.9em;
+    font-size: 2rem;
+}

@@ -1,0 +1,86 @@
+export const songs = [
+    {
+        name: 'All The Same',
+        artist: 'Deerhunter',
+        album: 'Fading Frontier',
+        id: 221,
+    },
+    {
+        name: 'All The Same',
+        artist: 'Does It Offend You, Yeah?',
+        album: 'All The Same',
+        id: 222,
+    },
+    {
+        name: 'All The Same',
+        artist: 'Real Estate',
+        album: 'Days',
+        id: 223,
+    },
+    {
+        name: 'All The Same',
+        artist: 'The Voidz',
+        album: 'Like All Before You',
+        id: 224,
+    },
+    {
+        name: 'All The Same',
+        artist: 'Wavves',
+        album: 'V',
+        id: 225,
+    },
+    {
+        name: 'Change',
+        artist: 'Fidlar',
+        album: 'Surviving The Dream',
+        id: 226,
+    },
+    {
+        name: 'Change',
+        artist: 'The War On Drugs',
+        album: 'I Dont Live Here Anymore',
+        id: 227,
+    },
+    {
+        name: 'Change',
+        artist: 'White Lies',
+        album: 'Big TV',
+        id: 228,
+    },
+    {
+        name: 'Change Your Mind',
+        artist: 'The Horrors',
+        album: 'Luminous',
+        id: 229,
+    },
+    {
+        name: 'Change Your Mind',
+        artist: 'The Killers',
+        album: 'Sawdust',
+        id: 230,
+    },
+    {
+        name: 'Change Yr Mind',
+        artist: 'LCD Soundsystem',
+        album: 'American Dream',
+        id: 231,
+    },
+    {
+        name: 'Changes',
+        artist: 'Balthazar',
+        album: 'Fever',
+        id: 232,
+    },
+    {
+        name: 'Changes',
+        artist: 'David Bowie',
+        album: 'Rolling Stone',
+        id: 233,
+    },
+    {
+        name: 'Changes',
+        artist: 'Soccer Mommy',
+        album: 'Evergreen',
+        id: 234,
+    },
+]
