@@ -6,9 +6,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2em;
 }
 
 .Results-heading {
     margin-left: 0.9em;
     font-size: 2rem;
+}
+
+.Tracklist {
+    margin: 0 1em;
+    padding-left: 1em;
+    width: 90%;
+}
+
+.Track-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #925c5c3d;
+    margin-bottom: 0.5em;
+}
+
+.Add-button {
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+    background-color: #925c5c59;
 }

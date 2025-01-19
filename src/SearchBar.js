@@ -1,33 +1,34 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
-import { songs } from './SongtitleMockup';
 
-function SearchBar() {
+const SearchBar = ({onSearch}) => {
 
-    const [searchTitle, setSearchTitle] = useState('');
-    const [searchResults, setSearchResults] = useState([])
+    const [input, setInput] = useState('');
 
-    const handleSearchInput = (event) => {
-        setSearchTitle(event.target.value);
+    const handleInputChange = (event) => {
+      setInput(event.target.value);
     };
-
-    const handleSearchTask = (event) => {
-        setSearchResults((searchResults) => searchResults.filter((searchResult) => searchTitle === songs.title))
+  
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        onSearch(input); 
+      }
     };
 
     return (
         <div className="Search-container">
             <input 
-            type="text"
-            placeholder="Songtitle"
-            value={searchTitle}
-            onChange={handleSearchInput}
-            className="Search-input"
+              type="text"
+              placeholder="Songtitle, Artist or Album"
+              value={input}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              className="Search-input"
             />
             <button 
-            type="submit" 
-            className="Search-button"
-            onClick={handleSearchTask}
+              type="submit" 
+              className="Search-button"
+              onClick={() => onSearch(input)}
             >
             Search
             </button>

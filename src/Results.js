@@ -1,12 +1,34 @@
 import React from 'react';
 import './Results.css';
-import Tracklist from './Tracklist';
+import Track from './Track';
 
-function Results() {
+function Results({searchResults, hasSearched, handleAddToPlaylist}) {
     return (
         <div className="Results-container">
             <h2 className="Results-heading">Results</h2>
-            <Tracklist />
+            <ul className="Tracklist">
+                {hasSearched && searchResults.length === 0 ? (
+                    <div>No results found</div>
+                ) : (
+                <>
+                {searchResults.map((track) => (
+                    <li key={track.id} className="Track-container">
+                        <Track 
+                            track={track}
+                            name={track.name} 
+                            artist={track.artist} 
+                            album={track.album} />
+                        <button 
+                            type="submit" 
+                            className="Add-button"
+                            onClick={() => handleAddToPlaylist(track)}
+                        >
+                        +
+                        </button>
+                    </li>
+                ))}
+                </>)}
+            </ul>
        </div>
     )
 }

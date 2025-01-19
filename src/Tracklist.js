@@ -1,20 +1,31 @@
-import React from 'react';
-import './Tracklist.css';
-import Track from './Track';
-import SearchBar from './SearchBar';
-import { songs } from './SongtitleMockup';
+import React from "react";
+import Track from "./Track";
+import "./Tracklist.css";
 
-function Tracklist({searchresults}) {
-
+function Tracklist({newPlaylist, handleRemoveFromPlaylist}) {
     return (
-        <ul className="Tracklist">
-            {searchresults.map((searchResult) => (
-                <div className="Track-container">
-                    <Track key={song.id} name={song.name} artist={song.artist} album={song.album} />
-                    <button type="submit" className="Add-button">+</button>
-                </div>
-            ))}
-        </ul>
+        <ul className="Playlist">
+                        <>
+                        {newPlaylist.map((track) => (
+                            <li key={track.id} className="Playlist-track">
+                                <Track 
+                                    track={track}
+                                    name={track.name} 
+                                    artist={track.artist} 
+                                    album={track.album} 
+                                    uri={track.uri}
+                                />
+                                <button 
+                                    type="submit" 
+                                    className="Remove-button"
+                                    onClick={() => handleRemoveFromPlaylist(track)}
+                                >
+                                -
+                                </button>
+                            </li>
+                        ))}
+                        </>
+                    </ul>
     )
 }
 

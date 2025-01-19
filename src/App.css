@@ -50,9 +50,14 @@
   margin: 0 1em;
 }
 
+::placeholder {
+  color: black;
+}
+
 .Body-container {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 5em;
 }
 
 @media (prefers-reduced-motion: no-preference) {

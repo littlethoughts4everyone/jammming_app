@@ -1,10 +1,10 @@
-.Tracklist {
+.Playlist {
     margin: 0 1em;
     padding-left: 1em;
     width: 90%;
 }
 
-.Track-container {
+.Playlist-track {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,13 +12,7 @@
     margin-bottom: 0.5em;
 }
 
-.Track-information {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.Add-button {
+.Remove-button {
     height: 30px;
     width: 30px;
     margin-right: 1em;
