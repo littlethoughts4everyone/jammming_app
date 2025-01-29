@@ -1,3 +1,12 @@
+body {
+  height: 100%;
+  background-image: url('./turntable-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .App {
   margin: 0 auto;
   width: 75%;
@@ -5,20 +14,17 @@
 
 .App-header {
   text-align: center;
-  background-color: white;
   width: 100%;
-  height: 8rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 2.5rem;
   color: black;
-  border-bottom: 5px solid rgb(39, 39, 39);
   overflow: hidden;
-  padding-bottom: .2em;
 }
 
-.Heading-container {
+.Title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,8 +33,11 @@
 
 .App-title {
   font-size: 4rem;
+  font-family: "Anton SC", serif;
+  letter-spacing: 4px;
   margin: 0;
   padding: 0;
+  color: #ffe7cb;
 }
 
 .App-title-part {
@@ -37,27 +46,34 @@
 
 .App-description {
   color: #fbb848;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  font-size: 1.5rem;
+  font-family: "Sour Gummy", serif;
+  font-weight: 200;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(68 68 68 / 80%);
 }
 
 .App-logo {
-  height: 80%;
-  width: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   pointer-events: none;
   margin: 0 1em;
 }
 
-::placeholder {
-  color: black;
-}
-
-.Body-container {
+.List-container {
   display: flex;
   justify-content: space-around;
   margin-bottom: 5em;
+}
+
+::placeholder {
+  color: black;
+  padding-left: 10px;
+  font-family: "Zain", serif;
+  font-size: larger;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -72,5 +88,72 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .App {
+    width: 95%;
+  }
+
+  .App-title {
+    font-size: 3.5rem;
+  }
+
+  .App-description {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .App-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .List-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .App-header {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .Title-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .App-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .App-title {
+    font-size: 3rem;
+  }
+
+  .App-description {
+    margin: 0 3rem;
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+  .App-title {
+    font-size: 2rem;
+  }
+
+  .App-logo {
+    width: 35px;
+    height: 35px;
   }
 }

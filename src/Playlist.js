@@ -10,6 +10,7 @@ function Playlist({newPlaylist, playlistName, handlePlaylistName, handleRemoveFr
 
     return (
         <div className="Playlist-container">
+            <h2 className="Playlist-heading">Your Playlist</h2>
             <input 
             type="text"
             placeholder="Enter a Playlist Name"
@@ -17,7 +18,7 @@ function Playlist({newPlaylist, playlistName, handlePlaylistName, handleRemoveFr
             onChange={handleNameChange}
             className='Playlist-input'
             />
-            {newPlaylist.length === 0 && <div className="Empty-message">Your playlist is empty.</div>}
+            {newPlaylist.length === 0 && <div className="Empty-message">Your playlist is currently empty.</div>}
             <Tracklist newPlaylist={newPlaylist} handleRemoveFromPlaylist={handleRemoveFromPlaylist} />
             <button
             type="submit"

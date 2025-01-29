@@ -11,10 +11,14 @@ function App() {
   const [playlistName, setPlaylistName] = useState('');
   const [newPlaylist, setNewPlaylist] = useState([]);
 
-  const onSearch = (input) => {
-    if (!input) return; 
-    Spotify.getSearchResults(input).then(setSearchResults);
-  };
+  const onSearch = useCallback((input) => {
+    Spotify.getSearchResults(input).then((results) => {
+      const filteredResults = results.filter(
+        (track) => !newPlaylist.some((playlistTrack) => playlistTrack.id === track.id)
+      );
+      setSearchResults(filteredResults);
+    });
+  }, [newPlaylist]);
 
   const handleAddToPlaylist = useCallback(
     (track) => {
@@ -58,18 +62,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div className="Heading-container">
+        <div className="Title-container">
           <h1 className="App-title">Ja<span className="App-title-part">mmm</span>ing!</h1>
-          <p className="App-description">Create a unique playlist for your next event!</p>
+          <p className="App-description">Create a unique playlist for your next event.</p>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo App-logo-right" alt="logo" />
       </header>
       <nav>
         <SearchBar 
           onSearch={onSearch}
         />
       </nav>
-      <body className="Body-container">
+      <div className="List-container">
         <Results 
           searchResults={searchResults} 
           handleAddToPlaylist={handleAddToPlaylist}
@@ -81,7 +85,7 @@ function App() {
           handleRemoveFromPlaylist={handleRemoveFromPlaylist}
           onSave={savePlaylist}
         />
-      </body>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .Playlist {
     margin: 0 1em;
-    padding-left: 1em;
+    padding-left: 0;
     width: 90%;
 }
 
@@ -8,8 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #925c5c3d;
+    background-color: rgb(255 231 203 / 55%);
     margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+.Playlist-track:hover {
+    background-color: rgb(255 231 203 / 65%);;
 }
 
 .Remove-button {
@@ -17,4 +22,12 @@
     width: 30px;
     margin-right: 1em;
     background-color: #925c5c59;
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.Remove-button:hover {
+    cursor: pointer;
+    background-color: #925c5cb8;
 }

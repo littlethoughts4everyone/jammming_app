@@ -3,25 +3,51 @@
     justify-content: space-between;
 }
 
+.Track-information {
+    max-width: 80%;
+}
+
 .Name {
     margin: 0;
     padding: 0.5em;
+    font-family: "Freeman", serif;
+    letter-spacing: 1px;
 }
 
 .Artist-album-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 1em;
-    padding: 0.3em 0.3em 0.3em 0.5em;
     background-color: #925c5c59;
 }
 
 .Artist {
+    padding-left: 0.4em;
     padding-right: 0.4em;
     border-right: 2px solid black;
+    font-family: "Zain", serif;
+    font-size: larger;
+    margin: 0;
 }
 
 .Album {
     padding-left: 0.4em;
+    padding-right: 0.4em;
+    font-family: "Zain", serif;
+    font-size: larger;
+    margin: 0;
+}
+
+  @media only screen and (max-width: 1024px) {
+   .Name {
+    font-size: 1rem;
+   }
+
+   .Artist {
+    font-size: 1rem;
+   }
+
+   .Album {
+    font-size: 1rem;
+   }
 }

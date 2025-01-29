@@ -1,22 +1,27 @@
 .Results-container {
     width: 50%;
-    border: 8px solid black;
+    max-height: 65rem;
+    overflow-y: overlay;
+    border: 4px solid black;
     border-radius: 10px;
-    background-color: #fbb848;
+    background-color: rgb(249 185 75 / 75%);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 2em;
+    scrollbar-color: #925c5c59 rgb(255 231 203 / 80%);
 }
 
 .Results-heading {
     margin-left: 0.9em;
     font-size: 2rem;
+    font-family: "Freeman", serif;
+    letter-spacing: 2px;
 }
 
 .Tracklist {
     margin: 0 1em;
-    padding-left: 1em;
+    padding-left: 0;
     width: 90%;
 }
 
@@ -24,8 +29,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #925c5c3d;
+    background-color: rgb(255 231 203 / 55%);
     margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+.Track-container:hover {
+    background-color: rgb(255 231 203 / 65%);;
 }
 
 .Add-button {
@@ -33,4 +43,41 @@
     width: 30px;
     margin-right: 1em;
     background-color: #925c5c59;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
 }
+
+.Add-button:hover {
+    cursor: pointer;
+    background-color: #925c5cb8;
+}
+
+@media only screen and (max-width: 1400px) {
+    .Results-container {
+        width: 48%;
+    }
+
+    .Results-heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Results-container {
+      width: 90%;
+      max-height: 30rem;
+    }
+}
+
+  @media only screen and (max-width: 940px) {
+    .Results-container {
+        width: 95%;
+        max-height: 20rem;
+    }
+
+    .Results-heading {
+        margin: 0.5em;
+    }
+}
+

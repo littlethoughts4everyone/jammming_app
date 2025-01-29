@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchBar.css';
 
 const SearchBar = ({onSearch}) => {
@@ -6,8 +6,17 @@ const SearchBar = ({onSearch}) => {
     const [input, setInput] = useState('');
 
     const handleInputChange = (event) => {
-      setInput(event.target.value);
+      const value = event.target.value;
+      setInput(value);
+      localStorage.setItem('searchInput', value);
     };
+
+    useEffect(() => {
+      const savedSearchInput = localStorage.getItem('searchInput');
+      if (savedSearchInput) {
+        setInput(savedSearchInput);
+      }
+    }, []);
   
     const handleKeyDown = (event) => {
       if (event.key === 'Enter') {
