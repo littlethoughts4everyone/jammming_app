@@ -5,7 +5,7 @@ import Track from './Track';
 function Results({searchResults, hasSearched, handleAddToPlaylist}) {
     return (
         <div className="Results-container">
-            <h2 className="Results-heading">Results</h2>
+            <h2 className="Results-heading">Your Search Results</h2>
             <ul className="Tracklist">
                 {hasSearched && searchResults.length === 0 ? (
                     <div>No results found</div>
